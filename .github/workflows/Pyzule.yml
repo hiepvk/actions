@@ -19,7 +19,7 @@ on:
         required: true
         type: string
       tweaks:
-        description: "Folder deb, dylib, example: tweaks/xx.deb tw/xx.dylib"
+        description: "Folder deb, dylib, example: tweaks/xx.deb tw/xx.dylib, "folder/*.* all files in the folder""
         default: "tweaks/"
         required: true
         type: string
