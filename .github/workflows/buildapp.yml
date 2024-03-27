@@ -47,7 +47,7 @@ jobs:
       - name: Checkout Main
         uses: actions/checkout@v4.1.1
         with:
-          repository: hiepvk/YTHiepvk
+          repository: hiepvk/Hiepvk
           ref: main
           path: main
           submodules: recursive
