@@ -11,7 +11,7 @@ on:
     inputs:
       repo_github:
         description: "Repository, example: user/repository"
-        default: "hiepvk/YTHiepvk"
+        default: "hiepvk/Hiepvk"
         required: true
         type: string
       ref_github:
