@@ -20,7 +20,12 @@ on:
         type: string
       tweaks:
         description: "Folder deb, dylib, example: tweaks/xx.deb tw/xx.dylib, \"folder/*.* all files in the folder\""
-        default: "tweaks/"
+        default: ""
+        required: true
+        type: string
+      commad:
+        description: "commad"
+        default: "-u -w -s"
         required: true
         type: string
       ipa_name:
@@ -68,7 +73,7 @@ jobs:
 
       - name: Inject
         run: |
-          pyzule -i ipa/app.ipa -f ${{ inputs.tweaks }} -u -w -s -o build/${{ inputs.ipa_name }}.ipa
+          pyzule -i ipa/app.ipa -f ${{ inputs.tweaks }} ${{ inputs.commad }} -o build/${{ inputs.ipa_name }}.ipa
 
       - name: Upload a Build Artifact
         if: ${{ inputs.upload_artifact }}
