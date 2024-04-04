@@ -5,7 +5,7 @@ on:
     inputs:
       repo_github:
         description: "Repository github: example: user/repository"
-        default: "hiepvk/src"
+        default: "hiepvk/Hiepvk"
         required: true
         type: string
       ref_github:
@@ -15,6 +15,7 @@ on:
         type: string
 jobs:
   build:
+    name: Update submodules
     runs-on: ubuntu-latest
 
     steps:
