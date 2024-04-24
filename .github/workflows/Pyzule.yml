@@ -62,7 +62,7 @@ jobs:
       - name: Pyzule Install
         run: |
           mkdir ipa && mkdir build
-          bash -c "$(curl https://raw.githubusercontent.com/hiepvk/pyzule/main/install-pyzule.sh)"
+          bash -c "$(curl https://raw.githubusercontent.com/asdfzxcvbn/pyzule/main/install-pyzule.sh)"
 
       - name: Download IPA
         id: download_ipa
