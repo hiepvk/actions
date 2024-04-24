@@ -48,7 +48,7 @@ on:
 jobs:
   build:
     name: Pyzule run
-    runs-on: macos-latest
+    runs-on: macos-12
     permissions:
       contents: write
 
