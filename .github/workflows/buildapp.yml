@@ -39,7 +39,7 @@ concurrency:
 jobs:
   build:
     name: Build Hiepvk
-    runs-on: macos-latest
+    runs-on: macos-13
     permissions:
       contents: write
 
