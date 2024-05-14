@@ -8,7 +8,7 @@ on:
     inputs:
       decrypted_youtube_url:
         description: "Direct URL to the decrypted YouTube ipa. The version of YouTube will be detected automatically."
-        default: "https://dl.dropboxusercontent.com/scl/fi/wwgulmb971lt7sw2i4wjf/YouTube-v19.18.2-AppTesters.ipa?rlkey=dq2r4q65jlfl2btrcl3mgx240&st=hswjcsu0&dl=0"
+        default: "https://dl.dropboxusercontent.com/scl/fi/o63vmb14279451h3zu82c/YouTube-v19.19.5-AppTesters.ipa?rlkey=cd877vghzp8gujlo0drd0ble8&st=4id814f8&dl=0"
         required: true
         type: string
       bundle_id:
