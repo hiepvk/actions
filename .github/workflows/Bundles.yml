@@ -60,7 +60,7 @@ jobs:
         run: |
           ${{ inputs.mkdir_bundle }}
           cd ${{ inputs.dir_bundle }}
-          ln -s ../${{ inputs.add_dir_sub }}/layout/Library/Application\ Support/${{ inputs.add_bundle }} ${{ inputs.add_bundle }}
+          ln -s ../${{ inputs.add_dir_sub }}/Library/Application\ Support/${{ inputs.add_bundle }} ${{ inputs.add_bundle }}
           git add .
           git commit -m "Added bundles"
           git push origin
