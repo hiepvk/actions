@@ -70,7 +70,7 @@ jobs:
         id: SDK
         uses: actions/cache@v4.2.0
         env:
-          cache-name: iOS-16.5-SDK
+          cache-name: iPhoneOS16.5
         with:
           path: theos/sdks/
           key: ${{ env.cache-name }}
