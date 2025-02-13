@@ -39,13 +39,13 @@ concurrency:
 jobs:
   build:
     name: Build Hiepvk
-    runs-on: macos-latest
+    runs-on: macos-13
     permissions:
       contents: write
 
     steps:
       - name: Checkout Main
-        uses: actions/checkout@v4.1.1
+        uses: actions/checkout@v4.2.2
         with:
           repository: hiepvk/Hiepvk
           ref: main
@@ -59,7 +59,7 @@ jobs:
         run: echo "$(brew --prefix make)/libexec/gnubin" >> $GITHUB_PATH 
 
       - name: Setup Theos
-        uses: actions/checkout@v4.1.1
+        uses: actions/checkout@v4.2.2
         with:
           repository: theos/theos
           ref: master
@@ -70,7 +70,7 @@ jobs:
         id: SDK
         uses: actions/cache@v4.2.0
         env:
-          cache-name: iPhoneOS16.5
+          cache-name: iOS-17.5-SDK
         with:
           path: theos/sdks/
           key: ${{ env.cache-name }}
@@ -86,7 +86,7 @@ jobs:
           THEOS: ${{ github.workspace }}/theos
 
       - name: Setup Theos Jailed
-        uses: actions/checkout@v4.1.1
+        uses: actions/checkout@v4.2.2
         with:
           repository: hiepvk/theos-jailed
           ref: master
