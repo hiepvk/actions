@@ -94,7 +94,7 @@ jobs:
           cd ${{ github.workspace }}
           git clone --quiet --depth=1 https://github.com/opa334/libundirect.git
           cd libundirect
-          install_to_theos.sh
+          ./install_to_theos.sh
 
       - name: Build Package 
         run: |
