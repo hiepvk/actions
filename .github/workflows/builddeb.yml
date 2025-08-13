@@ -92,7 +92,6 @@ jobs:
       - name: Clone Libundirect
         run: |
           git clone --quiet --depth=1 https://github.com/opa334/libundirect.git
-          cd libundirect
           echo $THEOS
           set -e
           gmake clean package FINALPACKAGE=1
