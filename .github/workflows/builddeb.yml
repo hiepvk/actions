@@ -93,7 +93,7 @@ jobs:
         run: |
           git clone --quiet --depth=1 https://github.com/opa334/libundirect.git
     
-          cp -v "libundirect" "$THEOS/include"
+          cp -r "libundirect" "$THEOS/include"
           echo "successfully installed libundirect"
           
       - name: Build Package 
