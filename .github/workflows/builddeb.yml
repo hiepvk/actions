@@ -92,7 +92,7 @@ jobs:
       - name: Clone Libundirect
         run: |
           git clone --quiet --depth=1 https://github.com/opa334/libundirect.git
-          mkdir -p "$THEOS/include/libundirect"
+          sudo mkdir -p "$THEOS/include/libundirect"
           cp -v "libundirect.h" "$THEOS/include/libundirect"
           cp -v "libundirect_dynamic.h" "$THEOS/include/libundirect"
           cp -v "libundirect_hookoverwrite.h" "$THEOS/include/libundirect"
