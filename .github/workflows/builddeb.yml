@@ -88,7 +88,14 @@ jobs:
           ref: master
           sparse-checkout: iPhoneOS${{ inputs.sdk_ver }}.sdk
           path: theos/sdks
-          
+
+      - name: Clone Libundirect
+        run: |
+          cd ${{ github.workspace }}
+          git clone --quiet --depth=1 https://github.com/opa334/libundirect.git
+          cd libundirect
+          ./install_to_theos.sh
+
       - name: Build Package 
         run: |
           export THEOS=theos
