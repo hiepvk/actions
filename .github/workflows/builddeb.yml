@@ -52,6 +52,8 @@ on:
 jobs:
   build:
     runs-on: macos-13
+      permissions:
+      contents: write
     steps:
       - uses: actions/checkout@main
         with:
