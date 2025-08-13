@@ -94,6 +94,7 @@ jobs:
           cd ${{ github.workspace }}
           git clone --quiet --depth=1 https://github.com/opa334/libundirect.git
           cd libundirect
+          export THEOS=theos
           set -e
           gmake clean
           gmake FINALPACKAGE=1
