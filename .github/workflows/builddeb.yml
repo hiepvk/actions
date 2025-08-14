@@ -93,13 +93,17 @@ jobs:
 
       - name: Clone Libundirect
         run: |
-          git clone --quiet --depth=1 https://github.com/opa334/libundirect.git
-          cd libundirect
-          mkdir "$THEOS/include/libundirect"
-          cp -v "libundirect.h" "$THEOS/include/libundirect"
-          cp -v "libundirect_dynamic.h" "$THEOS/include/libundirect"
-          cp -v "libundirect_hookoverwrite.h" "$THEOS/include/libundirect"
-          echo "successfully installed libundirect"
+          if [ -d "$THEOS/include/libundirect" ]; then
+            echo "libundirect exists. Pulling latest changes..."
+            cd $THEOS/include/libundirect
+            git pull
+          else
+            echo "libundirect does not exist. Cloning repository..."
+            cd $THEOS/include
+            git clone --quiet --depth=1 https://github.com/opa334/libundirect.git
+          fi
+        env:
+          THEOS: ${{ github.workspace }}/theos
           
       - name: Build Package 
         run: |
