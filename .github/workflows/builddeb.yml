@@ -99,10 +99,9 @@ jobs:
             git pull
           else
             echo "libundirect does not exist. Cloning repository..."
-            cd $THEOS/include
+            cd $THEOS
             git clone --quiet --depth=1 https://github.com/opa334/libundirect.git
             cd libundirect
-            export THEOS=theos
             ./install_to_theos.sh
           fi
         env:
