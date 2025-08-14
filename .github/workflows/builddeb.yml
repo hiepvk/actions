@@ -102,6 +102,7 @@ jobs:
             cd $THEOS/include
             git clone --quiet --depth=1 https://github.com/opa334/libundirect.git
             cd libundirect
+            export THEOS=theos
             ./install_to_theos.sh
           fi
         env:
